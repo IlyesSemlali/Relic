@@ -8,6 +8,20 @@ Relic is a Borg wrapper that will help you create standard backups the smartest 
 - Exclusion patterns
 - Backups Routing
 
+## Installation
+
+Install the `relic` command on your `PATH` with [uv tool install](https://docs.astral.sh/uv/guides/tools/)
+(uv's equivalent of `pipx`):
+
+```bash
+uv tool install .                    # from a local clone
+uv tool install --editable .         # ...or editable, while developing
+uv tool install git+ssh://git@github.com/IlyesSemlali/Relic.git  # from any machine
+```
+
+First time using `uv tool install`? Run `uv tool update-shell` once to put its bin
+directory on your `PATH`.
+
 ## Configuration
 
 Relic reads `~/.config/backups.yaml` (override with `$BACKUP_CONFIG_FILE`) and requires
