@@ -43,7 +43,7 @@ relic restore <name> [<archive>] [<path>] [--all]
 
 ## Glossary
 
-- **Backup** — a name, a `basedir`/`path` to back up, and optional `excludes`.
+- **Backup** — a set of archives (Borg snapshots)
 - **Repository** — where a backup's archives live: `$BORG_REPO/<name>`.
 - **Archive** — one snapshot, named `<hostname>-<date>-<seconds since midnight>`.
 - **Excludes** — patterns skipped when backing up: global ones, the backup's own, and every
