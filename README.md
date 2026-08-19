@@ -15,7 +15,13 @@ First time using `uv tool install`? Run `uv tool update-shell` once to put it on
 ## Configuration
 
 Relic reads `~/.config/backups.yaml` (override with `$BACKUP_CONFIG_FILE`). `$BORG_REPO`
-must point at where repos live — one per backup, at `$BORG_REPO/<name>`.
+must point at where repos live — one per backup, at `$BORG_REPO/<name>` — either a local
+folder or a remote path over SSH:
+
+```bash
+export BORG_REPO=/mnt/backups                          # local folder
+export BORG_REPO=ssh://user@nas.local:22/mnt/backups    # over SSH
+```
 
 ```yaml
 backups:

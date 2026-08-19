@@ -5,10 +5,10 @@ from pydantic import field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 # Matches a local path (e.g. "/mnt/backups") or an ssh:// URL followed by a
-# path (e.g. "ssh://user@host:22/backups"), so BORG_REPO can point at either
-# a local directory or a remote Borg repository over SSH.
+# path (e.g. "ssh://user@nas.local:22/backups"), so BORG_REPO can point at
+# either a local directory or a remote Borg repository over SSH.
 BORG_REPO_PATTERN = re.compile(
-    r"^(ssh://[0-9a-z]*(@[0-9a-z]*)?(:[0-9]*)?)?(/[0-9A-Za-z]*)*$"
+    r"^(ssh://[\w.-]*(@[\w.-]*)?(:[0-9]*)?)?(/[\w.-]*)*$"
 )
 
 
